@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // Redirect to index.html with the original path preserved
-      const route = location.pathname.replace(/^\/seqamlab/, '');
-      const redirectTo = "/seqamlab/index.html" + route + location.search + location.hash;
+      // Cleanly redirect to base path once, avoiding recursive stacking
+      const path = location.pathname.replace(/^\/seqamlab\//, '');
+      const redirectTo = "/seqamlab/" + path + location.search + location.hash;
       window.location.replace(redirectTo);
     </script>
   </head>
