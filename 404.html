@@ -1,1 +1,4 @@
-<script>location.replace('/YOUR_REPO_NAME' + location.pathname);</script>
+<script>
+  const redirect = location.pathname.split('/').slice(2).join('/');
+  location.replace('/seqamlab/' + redirect);
+</script>
