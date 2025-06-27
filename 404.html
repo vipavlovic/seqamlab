@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // GitHub Pages SPA fallback redirect
-      const redirectPath = location.pathname.replace(/^\/seqamlab/, '').replace(/\/[^\/]*\..+$/, '');
-      location.replace('/seqamlab/' + redirectPath + location.search + location.hash);
+      const redirectPath = location.pathname.replace(/^\/seqamlab/, '');
+      const newUrl = '/seqamlab' + redirectPath + location.search + location.hash;
+      location.replace(newUrl);
     </script>
   </head>
   <body>
