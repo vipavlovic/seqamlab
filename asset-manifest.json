@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/seqamlab/static/css/main.c65401e1.css",
-    "main.js": "/seqamlab/static/js/main.c8ea8804.js",
+    "main.css": "/seqamlab/static/css/main.86dec0e4.css",
+    "main.js": "/seqamlab/static/js/main.6d97c1ad.js",
     "index.html": "/seqamlab/index.html",
-    "main.c65401e1.css.map": "/seqamlab/static/css/main.c65401e1.css.map",
-    "main.c8ea8804.js.map": "/seqamlab/static/js/main.c8ea8804.js.map"
+    "main.86dec0e4.css.map": "/seqamlab/static/css/main.86dec0e4.css.map",
+    "main.6d97c1ad.js.map": "/seqamlab/static/js/main.6d97c1ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.c65401e1.css",
-    "static/js/main.c8ea8804.js"
+    "static/css/main.86dec0e4.css",
+    "static/js/main.6d97c1ad.js"
   ]
 }
