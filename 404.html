@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // Always redirect to the SPA entry point
-      const redirectTo = "/seqamlab/index.html" + location.search + location.hash;
+      // Redirect to the SPA root without appending index.html
+      const redirectTo = "/seqamlab/" + location.search + location.hash;
       window.location.replace(redirectTo);
     </script>
   </head>
