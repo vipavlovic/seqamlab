@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/seqamlab/static/js/main.d9a247fc.js",
+    "main.js": "/seqamlab/static/js/main.6a3e1cfc.js",
     "index.html": "/seqamlab/index.html",
-    "main.d9a247fc.js.map": "/seqamlab/static/js/main.d9a247fc.js.map"
+    "main.6a3e1cfc.js.map": "/seqamlab/static/js/main.6a3e1cfc.js.map"
   },
   "entrypoints": [
-    "static/js/main.d9a247fc.js"
+    "static/js/main.6a3e1cfc.js"
   ]
 }
