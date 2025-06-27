@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-      const expectedBase = "/seqamlab";
-      const path = location.pathname;
-
-      // Redirect only if not already under /seqamlab
-      if (!path.startsWith(expectedBase)) {
-        const redirectTo = expectedBase + path + location.search + location.hash;
-        window.location.replace(redirectTo);
-      }
+      // Always redirect to the SPA entry point
+      const redirectTo = "/seqamlab/index.html" + location.search + location.hash;
+      window.location.replace(redirectTo);
     </script>
   </head>
   <body>
