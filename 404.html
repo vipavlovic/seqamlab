@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // Cleanly redirect to base path once, avoiding recursive stacking
-      const path = location.pathname.replace(/^\/seqamlab\//, '');
-      const redirectTo = "/seqamlab/" + path + location.search + location.hash;
-      window.location.replace(redirectTo);
+      const base = "/seqamlab/";
+      const searchAndHash = location.search + location.hash;
+
+      // Redirect only if we're not already at the base
+      if (location.pathname !== base) {
+        window.location.replace(base + searchAndHash);
+      }
     </script>
   </head>
   <body>
