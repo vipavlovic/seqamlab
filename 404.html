@@ -1,4 +1,15 @@
-<script>
-  const redirect = location.pathname.split('/').slice(2).join('/');
-  location.replace('/seqamlab/' + redirect);
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // GitHub Pages SPA fallback redirect
+      const redirectPath = location.pathname.replace(/^\/seqamlab/, '').replace(/\/[^\/]*\..+$/, '');
+      location.replace('/seqamlab/' + redirectPath + location.search + location.hash);
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
