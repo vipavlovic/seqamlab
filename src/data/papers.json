@@ -50,5 +50,12 @@
     "year": "2021",
     "journal": "JA",
     "doi": "1234"
+  },
+  {
+    "title": "Paper ZZZ",
+    "authors": "Author ZZZ",
+    "year": "2019",
+    "journal": "JA",
+    "doi": "123456"
   }
 ]
