@@ -23,10 +23,12 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
 
       - name: Commit and Push Changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add src/data/*.json
-          git commit -m "Add entry from GitHub Issue"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/vipavlovic/seqamlab.git
+          git commit -m "Add entry from GitHub Issue" || echo "No changes to commit"
+          git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/vipavlovic/seqamlab.git
           git push origin main
