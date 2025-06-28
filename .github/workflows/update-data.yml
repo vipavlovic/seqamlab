@@ -23,18 +23,13 @@ jobs:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
 
-      - name: Commit and Push using GitHub Script
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.PAT }}
-          script: |
-            const { execSync } = require('child_process');
-            execSync('git config user.name "github-actions"', { stdio: 'inherit' });
-            execSync('git config user.email "actions@github.com"', { stdio: 'inherit' });
-            execSync('git add src/data/*.json', { stdio: 'inherit' });
-            try {
-              execSync('git commit -m "Add entry from GitHub Issue"', { stdio: 'inherit' });
-              execSync('git push origin main', { stdio: 'inherit' });
-            } catch (err) {
-              console.log("No changes to commit or push failed:", err.message);
-            }
+      - name: Commit and Push Changes using PAT
+        env:
+          PAT: ${{ secrets.PAT }}
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git remote set-url origin https://x-access-token:$PAT@github.com/vipavlovic/seqamlab.git
+          git add src/data/*.json
+          git commit -m "Add entry from GitHub Issue" || echo "No changes to commit"
+          git push origin main
