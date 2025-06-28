@@ -43,5 +43,12 @@
     "journal": "Journal of Artificial Intelligence Research",
     "doi": "10.1234/jair.2023.98765",
     "bibtex": "@article{zhang2023probabilistic,\n  title={Probabilistic Inference in Sequential Contexts},\n  author={Emily Zhang and Alan Turing},\n  journal={Journal of Artificial Intelligence Research},\n  year={2023},\n  doi={10.1234/jair.2023.98765}\n}"
+  },
+  {
+    "title": "Title Title",
+    "authors": "A XY",
+    "year": "2021",
+    "journal": "JA",
+    "doi": "1234"
   }
 ]
