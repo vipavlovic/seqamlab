@@ -28,14 +28,19 @@ export default function Submit() {
     const reader = new FileReader();
     reader.onload = () => {
       try {
-        const entries = bibtexParse.toJSON(reader.result);
-        const parsed = entries.map(entry => ({
-          title: entry.entryTags?.title || "",
-          authors: entry.entryTags?.author || "",
-          year: entry.entryTags?.year || "",
-          journal: entry.entryTags?.journal || entry.entryTags?.booktitle || "",
-          doi: entry.entryTags?.doi || ""
-        })).filter(p => p.title);
+        const raw = reader.result;
+        const entries = bibtexParse.toJSON(raw);
+        const parsed = entries.map(entry => {
+          const entryTextMatch = raw.match(new RegExp(`@${entry.entryType}\s*\{\s*${entry.citationKey}[^]*?\n\}`, "i"));
+          return {
+            title: entry.entryTags?.title || "",
+            authors: entry.entryTags?.author || "",
+            year: entry.entryTags?.year || "",
+            journal: entry.entryTags?.journal || entry.entryTags?.booktitle || "",
+            doi: entry.entryTags?.doi || "",
+            bibtex: entryTextMatch ? entryTextMatch[0].trim() : ""
+          };
+        }).filter(p => p.title);
         setBibtexData(parsed);
         setStatus(`✅ Parsed ${parsed.length} BibTeX entr${parsed.length === 1 ? 'y' : 'ies'}`);
       } catch (err) {
