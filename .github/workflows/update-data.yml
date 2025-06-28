@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Parse Issue and Append to papers.json via GitHub API
+      - name: Parse Issue and Append to Correct JSON via GitHub API
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.PAT }}
@@ -21,8 +21,15 @@ jobs:
             const body = process.env.ISSUE_BODY;
 
             const typeMatch = title.match(/^\[(.*?)\]/);
-            if (!typeMatch || typeMatch[1].toLowerCase() !== 'paper') {
-              console.log("⏭️ Skipping: not a [PAPER] issue.");
+            if (!typeMatch) {
+              console.log("⚠️ No type detected from issue title.");
+              return;
+            }
+
+            const type = typeMatch[1].toLowerCase();
+            const validTypes = ['paper', 'project', 'person', 'course'];
+            if (!validTypes.includes(type)) {
+              console.log(`⏭️ Type [${type}] not supported.`);
               return;
             }
 
@@ -33,7 +40,7 @@ jobs:
 
             const newEntry = JSON.parse(jsonMatch[1]);
 
-            const path = "src/data/papers.json";
+            const path = `src/data/${type}s.json`;
             const branch = "main";
 
             const { data: file } = await github.rest.repos.getContent({
@@ -53,7 +60,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               path,
-              message: "Append paper via GitHub Issue",
+              message: `Append new ${type} from GitHub Issue`,
               content: updatedContent,
               sha: file.sha,
               branch
