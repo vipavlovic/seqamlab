@@ -71,5 +71,26 @@
     "year": "2001",
     "journal": "Jorunal A",
     "doi": "123456"
+  },
+  {
+    "title": "Deep Learning for Pattern Recognition",
+    "authors": "Smith, John and Doe, Jane",
+    "year": "2020",
+    "journal": "Journal of Machine Learning",
+    "doi": "10.1000/deep001"
+  },
+  {
+    "title": "Advances in NLP and Transformers",
+    "authors": "Doe, Jane and Black, Alice",
+    "year": "2022",
+    "journal": "Proceedings of the NLP Conference",
+    "doi": "10.1000/nlp2022"
+  },
+  {
+    "title": "Biological Sequence Modeling with Attention",
+    "authors": "Lee, Kevin and Patel, Nina",
+    "year": "2021",
+    "journal": "Bioinformatics Today",
+    "doi": "10.1000/bio321"
   }
 ]
