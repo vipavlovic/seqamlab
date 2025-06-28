@@ -64,5 +64,12 @@
     "year": "1999",
     "journal": "Best Journal",
     "doi": "doi123"
+  },
+  {
+    "title": "New paper",
+    "authors": "John Doe",
+    "year": "2001",
+    "journal": "Jorunal A",
+    "doi": "123456"
   }
 ]
