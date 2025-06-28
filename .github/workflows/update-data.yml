@@ -1,35 +1,64 @@
-name: Handle Form Submissions
+name: Handle Form Submissions (API-based)
 
 on:
   issues:
     types: [opened]
 
 jobs:
-  parse-submission:
+  append-to-json:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Parse Issue and Append to papers.json via GitHub API
+        uses: actions/github-script@v6
         with:
-          node-version: 18
+          github-token: ${{ secrets.PAT }}
+          script: |
+            const title = process.env.ISSUE_TITLE;
+            const body = process.env.ISSUE_BODY;
 
-      - name: Parse Issue and Update JSON
-        run: node .github/scripts/parse-issue.js
+            const typeMatch = title.match(/^\[(.*?)\]/);
+            if (!typeMatch || typeMatch[1].toLowerCase() !== 'paper') {
+              console.log("⏭️ Skipping: not a [PAPER] issue.");
+              return;
+            }
+
+            const jsonMatch = body.match(/```json\n([\s\S]*?)\n```/);
+            if (!jsonMatch) {
+              throw new Error("❌ JSON block not found in issue body.");
+            }
+
+            const newEntry = JSON.parse(jsonMatch[1]);
+
+            const path = "src/data/papers.json";
+            const branch = "main";
+
+            const { data: file } = await github.rest.repos.getContent({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              path,
+              ref: branch
+            });
+
+            const content = Buffer.from(file.content, 'base64').toString();
+            const json = JSON.parse(content);
+            json.push(newEntry);
+
+            const updatedContent = Buffer.from(JSON.stringify(json, null, 2)).toString("base64");
+
+            await github.rest.repos.createOrUpdateFileContents({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              path,
+              message: "Append paper via GitHub Issue",
+              content: updatedContent,
+              sha: file.sha,
+              branch
+            });
+
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
-
-      - name: Commit and Push Changes using PAT
-        env:
-          PAT: ${{ secrets.PAT }}
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git remote set-url origin https://x-access-token:$PAT@github.com/vipavlovic/seqamlab.git
-          git add src/data/*.json
-          git commit -m "Add entry from GitHub Issue" || echo "No changes to commit"
-          git push origin main
