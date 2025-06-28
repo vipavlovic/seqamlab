@@ -39,7 +39,6 @@ jobs:
             }
 
             const newEntry = JSON.parse(jsonMatch[1]);
-
             const path = `src/data/${type}s.json`;
             const branch = "main";
 
@@ -53,11 +52,18 @@ jobs:
             const content = Buffer.from(file.content, 'base64').toString();
             const json = JSON.parse(content);
 
-            if (Array.isArray(newEntry)) {
-              json.push(...newEntry);
-            } else {
-              json.push(newEntry);
+            const toAdd = Array.isArray(newEntry) ? newEntry : [newEntry];
+
+            // Deduplication: only add papers with unique DOIs
+            const existingDOIs = new Set(json.map(e => (e.doi || "").toLowerCase()));
+            const filtered = toAdd.filter(e => !e.doi || !existingDOIs.has(e.doi.toLowerCase()));
+
+            if (filtered.length === 0) {
+              console.log("⚠️ No new unique entries to append.");
+              return;
             }
+
+            json.push(...filtered);
 
             const updatedContent = Buffer.from(JSON.stringify(json, null, 2)).toString("base64");
 
@@ -65,7 +71,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               path,
-              message: `Append new ${type}${Array.isArray(newEntry) ? " entries" : ""} from GitHub Issue`,
+              message: `Append ${filtered.length} new ${type}${filtered.length > 1 ? " entries" : ""} from GitHub Issue`,
               content: updatedContent,
               sha: file.sha,
               branch
