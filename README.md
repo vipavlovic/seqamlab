@@ -1,6 +1,6 @@
 # SEQAM Lab Website
 
-This is the official website for the SEQAM (Signal, Estimation, and Algorithmic Methods) Lab at Rutgers University.
+This is the official website for the SEQAM (Sequence Analysis and Modeling) Lab at Rutgers University.
 
 ## 🔍 Overview
 - Built using **React** and hosted on **GitHub Pages**
