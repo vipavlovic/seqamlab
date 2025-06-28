@@ -57,5 +57,12 @@
     "year": "2019",
     "journal": "JA",
     "doi": "123456"
+  },
+  {
+    "title": "Best Paper",
+    "authors": "Best Author",
+    "year": "1999",
+    "journal": "Best Journal",
+    "doi": "doi123"
   }
 ]
