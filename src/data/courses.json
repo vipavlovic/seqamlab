@@ -48,5 +48,10 @@
     "name": "Course 10: Sequence Learning 2024",
     "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v10).",
     "semester": "Fall 2024"
+  },
+  {
+    "name": "Test course",
+    "description": "Test ML",
+    "semester": "Spring 2021"
   }
 ]
