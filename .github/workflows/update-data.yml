@@ -17,7 +17,10 @@ jobs:
           node-version: 18
 
       - name: Parse Issue and Update JSON
-        run: node .github/scripts/parse-issue.js "${{ github.event.issue.title }}" "${{ github.event.issue.body }}"
+        run: node .github/scripts/parse-issue.js
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
 
       - name: Commit and Push Changes
         run: |
@@ -28,4 +31,3 @@ jobs:
           git push
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-

@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const issueTitle = process.argv[2];
-const issueBody = process.argv[3];
+const issueTitle = process.env.ISSUE_TITLE;
+const issueBody = process.env.ISSUE_BODY;
 
 if (!issueTitle || !issueBody) {
   console.error('❌ Missing issue title or body.');
