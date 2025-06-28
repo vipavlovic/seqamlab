@@ -1,1 +1,31 @@
-name: Update Data
+name: Handle Form Submissions
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  parse-submission:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Parse Issue and Update JSON
+        run: node .github/scripts/parse-issue.js "${{ github.event.issue.title }}" "${{ github.event.issue.body }}"
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add src/data/*.json
+          git commit -m "Add entry from GitHub Issue"
+          git push
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
