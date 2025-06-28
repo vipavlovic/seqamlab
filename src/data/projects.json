@@ -1,1 +1,52 @@
-[{"title": "Example Project", "description": "Details", "date": "2024-12-01"}]
+[
+  {
+    "title": "Project 1: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 1).",
+    "date": "2023-02-10"
+  },
+  {
+    "title": "Project 2: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 2).",
+    "date": "2024-03-10"
+  },
+  {
+    "title": "Project 3: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 3).",
+    "date": "2023-04-10"
+  },
+  {
+    "title": "Project 4: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 4).",
+    "date": "2024-05-10"
+  },
+  {
+    "title": "Project 5: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 5).",
+    "date": "2023-06-10"
+  },
+  {
+    "title": "Project 6: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 6).",
+    "date": "2024-07-10"
+  },
+  {
+    "title": "Project 7: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 7).",
+    "date": "2023-08-10"
+  },
+  {
+    "title": "Project 8: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 8).",
+    "date": "2024-09-10"
+  },
+  {
+    "title": "Project 9: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 9).",
+    "date": "2023-01-10"
+  },
+  {
+    "title": "Project 10: Modeling Biological Sequences",
+    "description": "Investigation into deep learning techniques for biological sequence analysis (Phase 10).",
+    "date": "2024-02-10"
+  }
+]

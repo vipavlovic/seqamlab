@@ -1,1 +1,92 @@
-[{"name": "Jane Doe", "title": "Postdoc", "research_interests": ["ML"], "profile_link": "https://example.com"}]
+[
+  {
+    "name": "Researcher B",
+    "title": "Postdoctoral Fellow",
+    "research_interests": [
+      "Machine Learning",
+      "Sequence Analysis"
+    ],
+    "profile_link": "https://example.com/people/1"
+  },
+  {
+    "name": "Researcher C",
+    "title": "Graduate Student",
+    "research_interests": [
+      "Machine Learning",
+      "Sequence Analysis",
+      "Inference"
+    ],
+    "profile_link": "https://example.com/people/2"
+  },
+  {
+    "name": "Researcher D",
+    "title": "Postdoctoral Fellow",
+    "research_interests": [
+      "Machine Learning"
+    ],
+    "profile_link": "https://example.com/people/3"
+  },
+  {
+    "name": "Researcher E",
+    "title": "Graduate Student",
+    "research_interests": [
+      "Machine Learning",
+      "Sequence Analysis"
+    ],
+    "profile_link": "https://example.com/people/4"
+  },
+  {
+    "name": "Researcher F",
+    "title": "Postdoctoral Fellow",
+    "research_interests": [
+      "Machine Learning",
+      "Sequence Analysis",
+      "Inference"
+    ],
+    "profile_link": "https://example.com/people/5"
+  },
+  {
+    "name": "Researcher G",
+    "title": "Graduate Student",
+    "research_interests": [
+      "Machine Learning"
+    ],
+    "profile_link": "https://example.com/people/6"
+  },
+  {
+    "name": "Researcher H",
+    "title": "Postdoctoral Fellow",
+    "research_interests": [
+      "Machine Learning",
+      "Sequence Analysis"
+    ],
+    "profile_link": "https://example.com/people/7"
+  },
+  {
+    "name": "Researcher I",
+    "title": "Graduate Student",
+    "research_interests": [
+      "Machine Learning",
+      "Sequence Analysis",
+      "Inference"
+    ],
+    "profile_link": "https://example.com/people/8"
+  },
+  {
+    "name": "Researcher J",
+    "title": "Postdoctoral Fellow",
+    "research_interests": [
+      "Machine Learning"
+    ],
+    "profile_link": "https://example.com/people/9"
+  },
+  {
+    "name": "Researcher K",
+    "title": "Graduate Student",
+    "research_interests": [
+      "Machine Learning",
+      "Sequence Analysis"
+    ],
+    "profile_link": "https://example.com/people/10"
+  }
+]

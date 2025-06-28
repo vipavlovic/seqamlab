@@ -1,1 +1,47 @@
-[{"title": "Example Paper", "authors": "A. Author", "date": "2025-01-01", "link": "https://example.com"}]
+[
+  {
+    "id": "doe2024seqamnet",
+    "title": "SEQAMNet: A Neural Architecture for Biosequence Analysis",
+    "authors": "Jane Doe and John Smith",
+    "year": "2024",
+    "journal": "Journal of Sequence Modeling",
+    "doi": "10.1234/jsm.2024.12345",
+    "bibtex": "@article{doe2024seqamnet,\n  title={SEQAMNet: A Neural Architecture for Biosequence Analysis},\n  author={Jane Doe and John Smith},\n  journal={Journal of Sequence Modeling},\n  year={2024},\n  doi={10.1234/jsm.2024.12345}\n}"
+  },
+  {
+    "id": "lee2023transformer",
+    "title": "Transformers in Time Series Analysis",
+    "authors": "Anna Lee and Mark Brown",
+    "year": "2023",
+    "journal": "IEEE Transactions on Neural Networks",
+    "doi": "10.1109/TNN.2023.45678",
+    "bibtex": "@article{lee2023transformer,\n  title={Transformers in Time Series Analysis},\n  author={Anna Lee and Mark Brown},\n  journal={IEEE Transactions on Neural Networks},\n  year={2023},\n  doi={10.1109/TNN.2023.45678}\n}"
+  },
+  {
+    "id": "pavlovic2022graph",
+    "title": "Graph-Based Representations for Sequential Data",
+    "authors": "Vladimir Pavlovic",
+    "year": "2022",
+    "journal": "Advances in Neural Information Processing Systems",
+    "doi": "10.5555/nips.2022.78901",
+    "bibtex": "@inproceedings{pavlovic2022graph,\n  title={Graph-Based Representations for Sequential Data},\n  author={Vladimir Pavlovic},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2022},\n  doi={10.5555/nips.2022.78901}\n}"
+  },
+  {
+    "id": "kim2025efficient",
+    "title": "Efficient Training of Long-Range Sequence Models",
+    "authors": "Sarah Kim and David Li",
+    "year": "2025",
+    "journal": "International Conference on Machine Learning",
+    "doi": "10.1234/icml.2025.23456",
+    "bibtex": "@inproceedings{kim2025efficient,\n  title={Efficient Training of Long-Range Sequence Models},\n  author={Sarah Kim and David Li},\n  booktitle={International Conference on Machine Learning},\n  year={2025},\n  doi={10.1234/icml.2025.23456}\n}"
+  },
+  {
+    "id": "zhang2023probabilistic",
+    "title": "Probabilistic Inference in Sequential Contexts",
+    "authors": "Emily Zhang and Alan Turing",
+    "year": "2023",
+    "journal": "Journal of Artificial Intelligence Research",
+    "doi": "10.1234/jair.2023.98765",
+    "bibtex": "@article{zhang2023probabilistic,\n  title={Probabilistic Inference in Sequential Contexts},\n  author={Emily Zhang and Alan Turing},\n  journal={Journal of Artificial Intelligence Research},\n  year={2023},\n  doi={10.1234/jair.2023.98765}\n}"
+  }
+]

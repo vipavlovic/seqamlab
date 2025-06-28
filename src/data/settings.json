@@ -1,0 +1,409 @@
+{
+    "version": "2.30",
+    "export": {
+        "limit": 500
+    },
+    "ui": {
+        "fluid": true,
+        "exportWithChevrons": true
+    },
+    "cores": {
+        "default": "proposals",
+        "entries": {
+            "arxiv": {
+                "list_display": [
+                    "summary",
+                    "journal",
+                    "abstract",
+                    "author_and_inst"
+                ],
+                "detail_display": [
+                    "summary",
+                    "abstract",
+                    "author_and_inst",
+                    "journal",
+                    "refs"
+                ],
+                "mlt_display": [
+                    "summary",
+                    "author_and_inst"
+                ],
+                "facet_display": [
+                    "author_name",
+                    "created",
+                    "category",
+                    "set"
+                ],
+                "xslx_export": [
+                    "id",
+                    "title",
+                    "author_and_inst"
+                ],
+                "fields": {}
+            },
+            "awards": {
+                "list_display": [
+                    "id",
+                    "title",
+                    "abstract",
+                    "summary_info",
+                    "institutions",
+                    "investigators"
+                ],
+                "detail_display": [
+                    "id",
+                    "title",
+                    "investigators",
+                    "institutions",
+                    "abstract"
+                ],
+                "mlt_display": [
+                    "id",
+                    "title",
+                    "abstract"
+                ],
+                "facet_display": [
+                    "effective_date_fiscal",
+                    "exp_date",
+                    "institution",
+                    "name"
+                ],
+                "xslx_export": [
+                    "id",
+                    "title",
+                    "name",
+                    "role",
+                    "email"
+                ],
+                "fields": {}
+            },
+            "patents": {
+                "list_display": [
+                    "id",
+                    "title",
+                    "publication_reference",
+                    "abstract",
+                    "description",
+                    "applicant",
+                    "inventor",
+                    "organization"
+                ],
+                "detail_display": [
+                    "id",
+                    "title",
+                    "abstract",
+                    "description",
+                    "applicant",
+                    "inventor",
+                    "organization",
+                    "references"
+                ],
+                "mlt_display": [
+                    "id",
+                    "title",
+                    "abstract",
+                    "description"
+                ],
+                "facet_display": [
+                    "inventor",
+                    "year",
+                    "class",
+                    "country",
+                    "organization"
+                ],
+                "xslx_export": [
+                    "id",
+                    "title"
+                ],
+                "fields": {}
+            },
+            "proposals": {
+                "list_display": [
+                    "summary",
+                    "lead_id",
+                    "bio",
+                    "description",
+                    "references",
+                    "support",
+                    "budget",
+                    "supplementary",
+                    "collaborators",
+                    "additional_documents",
+                    "facilities",
+                    "data_management",
+                    "mentoring",
+                    "deviation_authorization",
+                    "suggested_reviewers",
+                    "program_info",
+                    "dates",
+                    "pis",
+                    "received_year",
+                    "program_director",
+                    "original_support"
+                ],
+                "detail_display": [
+                    "program_info",
+                    "dates",
+                    "program_officers",
+                    "pis",
+                    "reviewers",
+                    "panels",
+                    "summary",
+                    "description",
+                    "bio",
+                    "references",
+                    "support",
+                    "original_support",
+                    "support_diff",
+                    "support_diff_percentage",
+                    "budget",
+                    "supplementary",
+                    "collaborators",
+                    "additional_documents",
+                    "facilities",
+                    "data_management",
+                    "mentoring",
+                    "deviation_authorization",
+                    "suggested_reviewers",
+                    "received_to_rcom_days"
+                ],
+                "mlt_display": [
+                    "pi_all",
+                    "program_info",
+                    "summary",
+                    "description"
+                ],
+                "facet_display": [
+                    "pi_name",
+                    "pi_email",
+                    "status",
+                    "directorate",
+                    "division",
+                    "inst",
+                    "managing_program",
+                    "received",
+                    "program_director",
+                    "pi_name_and_inst",
+                    "pi_department",
+                    "pi_city",
+                    "pi_state"
+                ],
+                "xslx_export": [
+                    "id",
+                    "lead_proposal",
+                    "lead_id",
+                    "status",
+                    "directorate",
+                    "division",
+                    "inst",
+                    "inst_state",
+                    "pi_name",
+                    "pi_inst",
+                    "pi_department",
+                    "pi_state",
+                    "pi_email",
+                    "title",
+                    "received",
+                    "program_announcement",
+                    "funding_program",
+                    "funding_program_code",
+                    "managing_program",
+                    "managing_program_code",
+                    "award_amount",
+                    "requested_amount",
+                    "budget",
+                    "summary",
+                    "description",
+                    "pi_degree_year"
+                ],
+                "fields": {}
+            },
+            "reports": {
+                "list_display": [
+                    "proposal_id",
+                    "dates",
+                    "participants",
+                    "participant_all",
+                    "recipient_organization",
+                    "pis",
+                    "goals",
+                    "opportunities",
+                    "results",
+                    "goals_next",
+                    "primary_text",
+                    "impact_principal",
+                    "impact_other",
+                    "impact_hr",
+                    "impact_physical_infr",
+                    "impact_inst_infr",
+                    "impact_information_infr",
+                    "impact_tech_transfer",
+                    "impact_society",
+                    "source"
+                ],
+                "detail_display": [
+                    "dates",
+                    "recipient_organization",
+                    "pis",
+                    "goals",
+                    "opportunities",
+                    "results",
+                    "goals_next",
+                    "acc_major_activities",
+                    "acc_objectives",
+                    "impact_principal",
+                    "impact_other",
+                    "impact_hr",
+                    "impact_physical_infr",
+                    "impact_inst_infr",
+                    "impact_information_infr",
+                    "impact_tech_transfer",
+                    "impact_society",
+                    "changes_approach",
+                    "changes_problems",
+                    "changes_expenditures",
+                    "changes_humans",
+                    "changes_vertebrate_animals",
+                    "changes_biohazards",
+                    "participants",
+                    "source",
+                    "products",
+                    "acc_major_activities",
+                    "acc_objectives",
+                    "acc_significant_results",
+                    "acc_key_outcomes"
+                ],
+                "mlt_display": [
+                    "dates",
+                    "recipient_organization",
+                    "pis"
+                ],
+                "facet_display": [
+                    "reporting_term",
+                    "pi_name",
+                    "rcpt_name"
+                ],
+                "xslx_export": [
+                    "id",
+                    "submitted",
+                    "start_date",
+                    "end_date",
+                    "pi_name",
+                    "rcpt_name",
+                    "title"
+                ],
+                "fields": {}
+            },
+            "scopus": {
+                "list_display": [
+                    "grants",
+                    "funding",
+                    "author_all",
+                    "summary",
+                    "title",
+                    "abstract",
+                    "author_name",
+                    "institutions"
+                ],
+                "detail_display": [
+                    "summary",
+                    "title",
+                    "abstract",
+                    "authors",
+                    "institutions",
+                    "author_all",
+                    "references"
+                ],
+                "mlt_display": [
+                    "id",
+                    "title",
+                    "abstract"
+                ],
+                "facet_display": [
+                    "author_and_inst",
+                    "intl_affiliations_author_name",
+                    "author_name",
+                    "author_inst_short",
+                    "author_country",
+                    "source",
+                    "date",
+                    "author_email"
+                ],
+                "xslx_export": [
+                    "id",
+                    "title",
+                    "author_email",
+                    "author_all",
+                    "author_and_inst",
+                    "intl_affiliations",
+                    "author_inst_short",
+                    "author_inst",
+                    "funding",
+                    "grants",
+                    "date"
+                ],
+                "fields": {}
+            },
+            "wos": {
+                "list_display": [
+                    "intl_affiliations",
+                    "author_inst",
+                    "author_email",
+                    "summary",
+                    "grant_agency",
+                    "fund_text",
+                    "author_all",
+                    "title",
+                    "abstract",
+                    "author_name",
+                    "institutions"
+                ],
+                "detail_display": [
+                    "id",
+                    "title",
+                    "abstract",
+                    "authors",
+                    "institutions",
+                    "fund_text",
+                    "grants",
+                    "references"
+                ],
+                "mlt_display": [
+                    "id",
+                    "title",
+                    "abstract",
+                    "author_all"
+                ],
+                "facet_display": [
+                    "grant_agency",
+                    "intl_affiliations_author_name",
+                    "author_name",
+                    "author_and_inst",
+                    "author_inst",
+                    "inst_country",
+                    "source",
+                    "date",
+                    "author_address"
+                ],
+                "xslx_export": [
+                    "id",
+                    "title",
+                    "intl_affiliations",
+                    "abstract",
+                    "author_name",
+                    "author_and_inst",
+                    "grant_agency",
+                    "fund_text"
+                ],
+                "fields": {}
+            }
+        }
+    },
+    "query_parsers": {
+        "default": "flexible"
+    },
+    "default_operator": "OR",
+    "pagination": {
+        "default": 10
+    }
+}

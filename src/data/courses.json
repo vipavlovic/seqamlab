@@ -1,1 +1,52 @@
-[{"name": "Course Name", "description": "Desc", "semester": "Fall 2025"}]
+[
+  {
+    "name": "Course 1: Sequence Learning 2025",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v1).",
+    "semester": "Spring 2025"
+  },
+  {
+    "name": "Course 2: Sequence Learning 2024",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v2).",
+    "semester": "Fall 2024"
+  },
+  {
+    "name": "Course 3: Sequence Learning 2025",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v3).",
+    "semester": "Spring 2025"
+  },
+  {
+    "name": "Course 4: Sequence Learning 2024",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v4).",
+    "semester": "Fall 2024"
+  },
+  {
+    "name": "Course 5: Sequence Learning 2025",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v5).",
+    "semester": "Spring 2025"
+  },
+  {
+    "name": "Course 6: Sequence Learning 2024",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v6).",
+    "semester": "Fall 2024"
+  },
+  {
+    "name": "Course 7: Sequence Learning 2025",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v7).",
+    "semester": "Spring 2025"
+  },
+  {
+    "name": "Course 8: Sequence Learning 2024",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v8).",
+    "semester": "Fall 2024"
+  },
+  {
+    "name": "Course 9: Sequence Learning 2025",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v9).",
+    "semester": "Spring 2025"
+  },
+  {
+    "name": "Course 10: Sequence Learning 2024",
+    "description": "A graduate-level course on modern approaches to modeling and analyzing sequential data (v10).",
+    "semester": "Fall 2024"
+  }
+]
