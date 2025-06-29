@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Replace the public version with private version for deployment
-cp src/data/papers.private.json src/data/papers.json
+# Copy private version into the deployable public directory
+cp src/data/papers.private.json public/data/papers.json
 
-# Build and deploy the site
+# Build and deploy
 npm run build
 npm run deploy
 
-# Restore the public version (if needed)
-git restore src/data/papers.json
+# Restore original (optional safety)
+git restore public/data/papers.json
 
 echo "✅ Deployed with private papers.json"
