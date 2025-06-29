@@ -1,41 +1,54 @@
-import React, { useState, useMemo } from "react";
-import people from "../data/people.json";
+import React, { useEffect, useState } from "react";
+import Card from "../components/Card";
 
 export default function People() {
+  const [people, setPeople] = useState([]);
   const [query, setQuery] = useState("");
 
-  const filteredPeople = useMemo(() => {
-    return people.filter((person) =>
-      person.name.toLowerCase().includes(query.toLowerCase()) ||
-      person.title.toLowerCase().includes(query.toLowerCase()) ||
-      person.research_interests.join(' ').toLowerCase().includes(query.toLowerCase())
-    );
-  }, [query]);
+  useEffect(() => {
+    fetch("/seqamlab/data/people.json").then(res => res.json()).then(setPeople);
+  }, []);
+
+  const filtered = people.filter(p =>
+    p.name.toLowerCase().includes(query.toLowerCase())
+  );
+
+  const current = filtered.filter(p => p.status !== "past");
+  const past = filtered.filter(p => p.status === "past");
 
   return (
-    <div className="p-6 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-[#cc0033] mb-6 text-center">Lab Members</h1>
+    <div className="max-w-5xl mx-auto px-4 py-8 space-y-10">
+      <input
+        type="text"
+        placeholder="Filter by name..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        className="border px-3 py-2 rounded w-full mb-6"
+      />
 
-      <div className="mb-8 text-center">
-        <input
-          type="text"
-          placeholder="Search by name, title, or interest..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          className="border border-gray-300 p-2 rounded w-full max-w-md"
-        />
-      </div>
+      <section>
+        <h2 className="text-2xl font-bold text-[#cc0033] mb-4">Lab Members</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {current.map((p, i) => (
+            <Card key={i} title={p.name} footer={p.profile_link && <a href={p.profile_link} target="_blank" rel="noreferrer">Profile</a>}>
+              {p.title}<br />
+              {p.research_interests}
+            </Card>
+          ))}
+        </div>
+      </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {filteredPeople.map((person, idx) => (
-          <div key={idx} className="bg-white shadow rounded-xl p-5 border border-gray-200 text-left">
-            <h2 className="text-lg font-bold mb-1">{person.name}</h2>
-            <p className="text-sm text-gray-600 mb-1">{person.title}</p>
-            <p className="text-sm text-gray-500 mb-2">{person.research_interests.join(', ')}</p>
-            <a href={person.profile_link} className="text-blue-600 hover:underline" target="_blank" rel="noreferrer">Profile</a>
-          </div>
-        ))}
-      </div>
+      <section>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Former Lab Members</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {past.map((p, i) => (
+            <Card key={i} title={p.name} footer={p.profile_link && <a href={p.profile_link} target="_blank" rel="noreferrer">Profile</a>}>
+              {p.title}<br />
+              {p.research_interests}
+            </Card>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

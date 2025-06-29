@@ -1,12 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { auth, provider } from "../firebase";
+import { signInWithPopup, signOut } from "firebase/auth";
+import allowedUsers from "../data/authorized_users.json";
 import bibtexParse from "bibtex-parse-js";
 
 export default function Submit() {
+  const [user, setUser] = useState(null);
   const [type, setType] = useState("paper");
   const [form, setForm] = useState({});
   const [status, setStatus] = useState("");
   const [bibtexData, setBibtexData] = useState([]);
   const [fileName, setFileName] = useState("");
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((u) => {
+      const screenName = u?.reloadUserInfo?.screenName;
+      if (u && allowedUsers.includes(screenName)) {
+        setUser(u);
+      }
+    });
+    return () => unsubscribe();
+  }, []);
 
   const fields = {
     paper: ["title", "authors", "year", "journal", "doi"],
@@ -59,15 +73,41 @@ export default function Submit() {
       : `[${type.toUpperCase()}] ${form.title || form.name}`;
 
     const issueBody = `\n\nSubmitted via SEQAM Lab website:\n\n\`\`\`json\n${JSON.stringify(entries, null, 2)}\n\`\`\``;
-
-    const issueUrl = `https://github.com/vipavlovic/seqamlab/issues/new?title=${encodeURIComponent(issueTitle)}&body=${encodeURIComponent(issueBody)}`;
+    const labels = encodeURIComponent("email-alert");
+    const issueUrl = `https://github.com/vipavlovic/seqamlab/issues/new?title=${encodeURIComponent(issueTitle)}&body=${encodeURIComponent(issueBody)}&labels=${labels}`;
 
     window.open(issueUrl, '_blank');
     setStatus("✅ GitHub Issue draft opened in new tab. Review and submit it manually.");
   };
 
+  const username = user?.reloadUserInfo?.screenName;
+
+  if (!username || !allowedUsers.includes(username)) {
+    return (
+      <div className="text-center mt-20 space-y-4">
+        <p className="text-lg">This page is restricted to SEQAM Lab members.</p>
+        <button
+          onClick={() => signInWithPopup(auth, provider)}
+          className="bg-[#cc0033] text-white px-4 py-2 rounded"
+        >
+          Sign in with GitHub
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="p-6 max-w-2xl mx-auto">
+      <div className="flex justify-between items-center mb-4 text-sm text-gray-600">
+        <span>Signed in as <strong>{username}</strong></span>
+        <button
+          onClick={() => { signOut(auth); setUser(null); }}
+          className="text-red-600 underline"
+        >
+          Sign out
+        </button>
+      </div>
+
       <h1 className="text-3xl font-bold text-[#cc0033] mb-6 text-center">Submit New Entry</h1>
 
       <form onSubmit={handleSubmit} className="space-y-4">
