@@ -92,5 +92,85 @@
     "year": "2021",
     "journal": "Bioinformatics Today",
     "doi": "10.1000/bio321"
+  },
+  {
+    "title": "ConsSeg: Accelerating Diffusion Model-based Semantic Segmentation with Consistency Models",
+    "authors": "Alen Mrdovi\\'c and Seonghyeon Moon and Sejong Yoon and Mubbasir Kapadia and Vladimir Pavlovic",
+    "year": "2024",
+    "journal": "",
+    "doi": "",
+    "bibtex": ""
+  },
+  {
+    "title": "{SODA}: Spectral Orthogonal Decomposition Adaptation for Diffusion Models",
+    "authors": "Xinxi Zhang and Song Wen and Ligong Han and Felix Juefei and Akash Srivastava and Junzhou Huang and Hao Wang and Molei Tao and Vladimir Pavlovic and Dimitris Metaxas",
+    "year": "2025",
+    "journal": "IEEE/CVF Winter Conference on Applications of Computer Vision, {WACV} 2025",
+    "doi": "",
+    "bibtex": ""
+  },
+  {
+    "title": "{GenVP}: Generating Visual Puzzles With Contrastive Hierarchical {VAE}s",
+    "authors": "Kalliopi Baisoti and Pritish Sahu and Tony Qingze Liu and Zihao Xu and Hao Wang and Vladimir Pavlovic",
+    "year": "2025",
+    "journal": "13h International Conference on Learning Representations, {ICLR} 2025",
+    "doi": "",
+    "bibtex": ""
+  },
+  {
+    "title": "PLOG-PLL: Improving Deep Partial Label Learning with Logical Constraints",
+    "authors": "Liwei Che and Efthymia Tsamoura and Vladimir Pavlovic",
+    "year": "2025",
+    "journal": "",
+    "doi": "",
+    "bibtex": ""
+  },
+  {
+    "title": "{Box2Flow}: Instance-based Action Flow Graphs from Videos",
+    "authors": "Jiatong Li and Vladimir Pavlovic",
+    "year": "2024",
+    "journal": "27th International Conference on Pattern Recognition, {ICPR} 2024",
+    "doi": "",
+    "bibtex": ""
+  },
+  {
+    "title": "Generative Visual Puzzles with Global-Local Masked Contrastive {HVAE}s",
+    "authors": "Kalliopi Basioti and Pritish Sahu and Tony Qingze Liu and Zihao Xu and Hao Wang and Vladimir Pavlovic",
+    "year": "2024",
+    "journal": "",
+    "doi": "",
+    "bibtex": ""
+  },
+  {
+    "title": "{TrajDiffuse}: A Conditional Diffusion Model for Environment-Aware Trajectory Prediction",
+    "authors": "Tony Qingze Liu and Danrui Li and Samuel S. Sohn and Sejong Yoon and Mubbasir Kapadia and Vladimir Pavlovic",
+    "year": "2024",
+    "journal": "27th International Conference on Pattern Recognition, {ICPR} 2024",
+    "doi": "",
+    "bibtex": ""
+  },
+  {
+    "title": "{CIC-BART-SSA}: Controllable Image Captioning with Structured Semantic Augmentation",
+    "authors": "Kalliopi Basioti and Mohamed A. Abdelsalam and Federico Fancellu and Vladimir Pavlovic and Afsaneh Fazly",
+    "year": "2024",
+    "journal": "European Conference on Computer Vision, {ECCV}",
+    "doi": "",
+    "bibtex": ""
+  },
+  {
+    "title": "End-to-end Learning for 3D Facial Animation from Raw Waveforms of Speech",
+    "authors": "Hai Xuan Pham and Yuting Wang and Vladimir Pavlovic",
+    "year": "2017",
+    "journal": "",
+    "doi": "",
+    "bibtex": ""
+  },
+  {
+    "title": "The Role of Data-driven Priors in Multi-agent Crowd Trajectory Estimation",
+    "authors": "Gang Yang and Sejong Yoon and Mubbasir Kapadia and Vladimir Pavlovic",
+    "year": "2017",
+    "journal": "",
+    "doi": "",
+    "bibtex": ""
   }
 ]
