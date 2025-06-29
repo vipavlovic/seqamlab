@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { auth, provider } from "../firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
-import allowedUsers from "../data/authorized_users.json";
 import bibtexParse from "bibtex-parse-js";
+
+let allowedUsers = [];
+try {
+  allowedUsers = require("../data/authorized_users.json");
+} catch (err) {
+  console.warn("⚠️ authorized_users.json not found. Submit access will be disabled in this build.");
+}
 
 export default function Submit() {
   const [user, setUser] = useState(null);
