@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Alice Nguyen",
+    "title": "PhD Student",
+    "research_interests": "Bioinformatics, Machine Learning",
+    "profile_link": "https://example.com/alice",
+    "status": "current"
+  },
+  {
+    "name": "Brian Kim",
+    "title": "Postdoctoral Fellow",
+    "research_interests": "Deep Learning, Genomics",
+    "profile_link": "https://example.com/brian",
+    "status": "current"
+  },
+  {
+    "name": "Carla Singh",
+    "title": "PhD (2017\u20132023)",
+    "research_interests": "Sequence modeling",
+    "profile_link": "https://example.com/carla",
+    "status": "past"
+  },
+  {
+    "name": "David Chen",
+    "title": "MS (2019\u20132021)",
+    "research_interests": "Structural biology",
+    "profile_link": "https://example.com/david",
+    "status": "past"
+  }
+]
