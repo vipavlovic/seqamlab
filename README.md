@@ -28,3 +28,4 @@ This is the official website for the SEQAM (Sequence Analysis and Modeling) Lab 
 ## Some location of files
 - Home page Layout - src/pages/Home.jsx
 - NavBar page - src/components/Navbar.jsx
+- hi
