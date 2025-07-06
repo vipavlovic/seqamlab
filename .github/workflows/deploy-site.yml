@@ -3,7 +3,11 @@ name: Deploy Site to GitHub Pages
 on:
   push:
     paths:
-      - 'src/data/**'
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+      - 'tailwind.config.js'
+      - 'postcss.config.js'
     branches:
       - main
 
