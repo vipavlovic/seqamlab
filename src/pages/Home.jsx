@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
+import headerBg from "../data/imgs/header.jpg";
 
 export default function Home() {
   const [papers, setPapers] = useState([]);
@@ -23,13 +24,15 @@ export default function Home() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 space-y-12">
-      <header className="text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold text-[#cc0033] mb-2">
-          Sequence Analysis and Modeling Lab (SEQAM)
-        </h1>
-        <p className="text-gray-700 max-w-2xl mx-auto text-base">
-          Researching machine learning, sequence analysis, bioinformatics, and probabilistic modeling to understand and engineer complex data.
-        </p>
+      <header className="text-center bg-cover bg-center bg-no-repeat py-16 px-4 rounded-lg" style={{backgroundImage: `url(${headerBg})`}}>
+        <div className="bg-gray/5 backdrop-blur-sm rounded-lg p-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-black mb-2">
+            Sequence Analysis and Modeling Lab (SEQAM)
+          </h1>
+          <p className="text-gray-700 max-w-2xl mx-auto text-base">
+            Researching machine learning, sequence analysis, bioinformatics, and probabilistic modeling to understand and engineer complex data.
+          </p>
+        </div>
       </header>
 
       <section>

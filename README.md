@@ -24,3 +24,7 @@ This is the official website for the SEQAM (Sequence Analysis and Modeling) Lab 
 ## 📄 Documentation
 - [Deployment Guide](DEPLOYMENT.md)
 - [Contribution Guide](CONTRIBUTING.md)
+
+## Some location of files
+- Home page Layout - src/pages/Home.jsx
+
