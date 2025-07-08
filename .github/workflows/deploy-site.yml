@@ -1,8 +1,5 @@
 name: Deploy Site to GitHub Pages
 
-permissions:
-  contents: write
-
 on:
   push:
     paths:
@@ -32,5 +29,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT }}
           publish_dir: ./build
