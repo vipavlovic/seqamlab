@@ -28,4 +28,4 @@ This is the official website for the SEQAM (Sequence Analysis and Modeling) Lab 
 ## Some location of files
 - Home page Layout - src/pages/Home.jsx
 - NavBar page - src/components/Navbar.jsx
-- hi
+- List of authorized users - src/data/authorized_users.json (note: this file is not included in the distribution.)

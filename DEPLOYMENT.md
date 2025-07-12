@@ -4,6 +4,13 @@
 - Node.js ≥ 16.x
 - GitHub account and access to repo
 - GitHub Personal Access Token (PAT) for form submissions
+- src/data/authorized_users.json (not included in the distribution) - this files lists users authorized to edit content through Submit page.  The structure is
+```
+[
+  "github_id_1",
+  "github_id_2"
+]
+```
 
 ## 🚀 Initial Setup
 ```bash
