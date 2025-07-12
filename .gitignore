@@ -6,7 +6,6 @@
 /dist
 /node_modules/
 /node_modules/.cache/
-/*.log
 
 # misc
 .DS_Store
@@ -39,3 +38,6 @@ src/data/authorized_users.json
 
 # Private papers.json
 src/data/papers.private.json
+
+# MacOS
+.DS_Store
