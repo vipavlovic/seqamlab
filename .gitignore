@@ -34,7 +34,7 @@ Icon?
 node_modules/.cache/gh-pages/
 
 # Private user access control
-src/data/authorized_users.json
+# src/data/authorized_users.json
 
 # Private papers.json
 src/data/papers.private.json
