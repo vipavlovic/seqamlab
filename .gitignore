@@ -1,11 +1,11 @@
 # dependencies
-/node_modules
+node_modules
 
 # production
-/build
-/dist
-/node_modules/
-/node_modules/.cache/
+build
+dist
+node_modules/
+node_modules/.cache/
 
 # misc
 .DS_Store
